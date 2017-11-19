@@ -19,6 +19,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     @IBOutlet weak var map: MKMapView!
     
+    var type = "regtype"
+    
     let locationManager = CLLocationManager()
     // draw circle
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -35,7 +37,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         let content = UNMutableNotificationContent()
         content.title = "Spendings Alert"
-        content.body = "Remember your budget for _____ is $_____"
+        if type == "rest" {
+            if let b = UserDefaults.standard.object(forKey: "CurrentExpense2") as? String{
+                let currentBudget = b
+                content.body = "Remember your budget for Food is $" + currentBudget
+            }
+        }
+        else if type == "enter" {
+            if let b = UserDefaults.standard.object(forKey: "CurrentExpense3") as? String{
+                let currentBudget = b
+                content.body = "Remember your budget for Entertainment is $" + currentBudget
+            }
+            
+            
+        }
+        else if type == "retail" {
+            if let b = UserDefaults.standard.object(forKey: "CurrentExpense4") as? String{
+                let currentBudget = b
+                content.body = "Remember your budget for Retail is $" + currentBudget
+            }
+            
+        }
         content.badge = 1
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
@@ -83,6 +105,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             // region data
             var title = "Jackie's Sports Emporium"
+            type = "retail"
             //need to specify type of expense
             var coordinate = CLLocationCoordinate2DMake(42.9988376, -81.2784611)
             var regionRadius = 5.0
@@ -105,6 +128,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             // region data
             title = "Zaggy's Tech-Palace"
+            type = "enter"
             //need to specify type of expense
             coordinate = CLLocationCoordinate2DMake(43.000690, -81.276636)
             regionRadius = 40.0
@@ -127,6 +151,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             // region data
             title = "Weija's Butchershop"
+            type = "rest"
             //need to specify type of expense
             coordinate = CLLocationCoordinate2DMake(43.001594, -81.277124)
             regionRadius = 40.0
@@ -182,14 +207,45 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     //checks if user has been in proximity for x period of time
     func updateRegions() {
+        let x = UserDefaults.standard.object(forKey: "CurrentExpense2") as? String
+        let y = UserDefaults.standard.object(forKey: "CurrentExpense3") as? String
+        let z = UserDefaults.standard.object(forKey: "CurrentExpense4") as? String
+
+
         let regionMaxVisiting = 2.5
         if NSDate().timeIntervalSince(entrytime as Date) > regionMaxVisiting {
-            showAlert("Remember your budget for _____ is $_____")
+            if type == "rest" {
+                var temp1 = "Remember your budget for Food is $"
+                showAlert(temp1 + x!)
+            }
+            else if type == "enter" {
+                var temp2 = "Remember your budget for Entertainment is $"
+                showAlert(temp2 + y!)
+                
+            }
+            else if type == "retail" {
+                var temp3 = "Remember your budget for Retail is  $"
+                showAlert(temp3 + z!)
+                
+            }
             entered = false
         }
         let content = UNMutableNotificationContent()
         content.subtitle = "Spendings Alert"
-        content.body = "Remember your budget for _____ is $_____"
+        if type == "rest" {
+            var temp1 = "Remember your budget for Food is $"
+            var temp2 = temp1 + x!
+            content.body = temp2
+        }
+        else if type == "enter" {
+            content.body = ("Remember your budget for Entertainment is $" + y!)
+            
+        }
+        else if type == "retail" {
+            content.body = ("Remember your budget for Retail is $" + z!)
+            
+        }
+        //content.body = "Remember your budget for _____ is $_____"
         content.badge = 1
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
@@ -216,5 +272,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     
 }
+
+
 
 
