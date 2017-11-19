@@ -38,7 +38,8 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     
     @IBAction func EnterButton(_ sender: Any) {
-        
+        InputField.text = nil
+        itemInput.text = nil
         var textNumber: String = ""
         if (currentCategory == "Beverages"){
             textNumber = "CurrentExpense1"
