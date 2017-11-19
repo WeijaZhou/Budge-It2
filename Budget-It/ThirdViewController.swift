@@ -74,7 +74,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
         newEntry.setValue(string_NewExpense, forKey:"price")
         newEntry.setValue(currentCategory, forKey:"category")
-        newEntry.setValue(inputTextString, forKey:"price")
+        newEntry.setValue(inputTextString, forKey:"itemName")
         print(inputTextString)
         do{
         try context.save()
