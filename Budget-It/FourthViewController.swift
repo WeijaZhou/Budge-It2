@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 class FourthViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    var list:[String] = []
+    var list:[String] = ["Coke     2.75     Restaurant/Food", "MovieTheater     10.00     Entertainment", "Apple Juice     11.00     Beverage"]
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return (list.count)
@@ -22,45 +22,7 @@ class FourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return(cell)
     }
     @IBOutlet weak var testLabel: UILabel!
-    override func viewDidLoad() {
-        list.removeAll()
-        super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
-        
-        request.returnsObjectsAsFaults = false
-        do{
-            let results = try context.fetch(request)
-            
-            if results.count>0{
-                for result in results as! [NSManagedObject]{
-                    let itemName = result.value(forKey: "itemName") as? String
-                    var price = result.value(forKey: "price") as? String
-                    let category = result.value(forKey: "category") as? String
-                    if (price != nil){
-                        
-                    }
-                    else{
-                        price = "0"
-                    }
-                    print(itemName)
-                    print(category)
-                    print(price)
-                    //                    let finalString1 = itemName! + "     "
-                    //                    let finalString2 = price! + "      "
-                    //                    let finalString3 = finalString1 + finalString2 + category!
-                    //                    list.append(finalString3)
-                    
-                }
-            }
-        }
-        catch{
-            
-        }
-        
-    }
-    override func viewWillAppear(_ animated: Bool) {
+        override func viewWillAppear(_ animated: Bool) {
         
         list.removeAll()
 
@@ -76,19 +38,17 @@ class FourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if results.count>0{
                 for result in results as! [NSManagedObject]{
                     let itemName = result.value(forKey: "itemName") as? String
-                    if let price = result.value(forKey: "price") as? String{
-                        var newPrice = price
-                    }
+                     let price = result.value(forKey: "price") as? String
+                 
                     let category = result.value(forKey: "category") as? String
                    
                     print(itemName)
                     print(category)
-                    print(newPrice)
+                    print(price)
                     print ("FINAL STRING -----")
-                    //let finalString1 = itemName! + "     "
-                    let finalString2 = newPrice + "      "
-                    //let finalString3 = finalString1 + finalString2 + category!
-                    let finalString3 =  finalString2 + category!
+                    let finalString1 = itemName! + "     "
+                    let finalString2 = price! + "      "
+                    let finalString3 = finalString1 + finalString2 + category!
                     list.append(finalString3)
                     
                 }

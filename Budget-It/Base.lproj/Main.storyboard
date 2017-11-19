@@ -294,7 +294,7 @@
         <!--Savings-->
         <scene sceneID="Vz8-G6-JWN">
             <objects>
-                <viewController id="g5N-HL-XBG" sceneMemberID="viewController">
+                <viewController id="g5N-HL-XBG" customClass="SavingController" customModule="Budget_It" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Rt-Yq-59G"/>
                         <viewControllerLayoutGuide type="bottom" id="pq2-Xm-aDn"/>
@@ -511,6 +511,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Savings" image="savings" id="rve-2P-UEP"/>
                     <navigationItem key="navigationItem" id="37w-1W-iPI"/>
+                    <connections>
+                        <outlet property="currentBudget" destination="hzL-dF-t64" id="B8t-N9-ygE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCt-JN-CiN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1047,7 +1050,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FP5-uB-ldc">
-                                <rect key="frame" x="25" y="-65" width="364" height="752"/>
+                                <rect key="frame" x="25" y="64" width="364" height="623"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>

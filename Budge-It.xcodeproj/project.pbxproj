@@ -20,7 +20,8 @@
 		A51E3A981FC097C000EB77A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51E3A961FC097C000EB77A1 /* LaunchScreen.storyboard */; };
 		A51E3AA31FC097C000EB77A1 /* Budget_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3AA21FC097C000EB77A1 /* Budget_ItTests.swift */; };
 		A51E3AAE1FC097C000EB77A1 /* Budget_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3AAD1FC097C000EB77A1 /* Budget_ItUITests.swift */; };
-		A5C4BFBE1FC16E8C0083DEBC /* test2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5C4BFBC1FC16E8C0083DEBC /* test2.xcdatamodeld */; };
+		A54415EC1FC18D0B00D1CE45 /* SavingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54415EB1FC18D0B00D1CE45 /* SavingsController.swift */; };
+		A5C4BFBE1FC16E8C0083DEBC /* main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5C4BFBC1FC16E8C0083DEBC /* main.xcdatamodeld */; };
 		A5C4BFC01FC173AF0083DEBC /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C4BFBF1FC173AF0083DEBC /* FourthViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +62,8 @@
 		A51E3AA91FC097C000EB77A1 /* Budget-ItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Budget-ItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51E3AAD1FC097C000EB77A1 /* Budget_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget_ItUITests.swift; sourceTree = "<group>"; };
 		A51E3AAF1FC097C000EB77A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5C4BFBD1FC16E8C0083DEBC /* test2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = test2.xcdatamodel; sourceTree = "<group>"; };
+		A54415EB1FC18D0B00D1CE45 /* SavingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingsController.swift; sourceTree = "<group>"; };
+		A5C4BFBD1FC16E8C0083DEBC /* main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = main.xcdatamodel; sourceTree = "<group>"; };
 		A5C4BFBF1FC173AF0083DEBC /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,9 +115,10 @@
 		A51E3A8A1FC097C000EB77A1 /* Budget-It */ = {
 			isa = PBXGroup;
 			children = (
+				A54415EB1FC18D0B00D1CE45 /* SavingsController.swift */,
 				A51E3A8B1FC097C000EB77A1 /* AppDelegate.swift */,
 				0955E7E41FC17D93005777A7 /* linktowebController.swift */,
-				A5C4BFBC1FC16E8C0083DEBC /* test2.xcdatamodeld */,
+				A5C4BFBC1FC16E8C0083DEBC /* main.xcdatamodeld */,
 				A51E3A8D1FC097C000EB77A1 /* FirstViewController.swift */,
 				A51E3A8F1FC097C000EB77A1 /* SecondViewController.swift */,
 				A518F2ED1FC10A15006E8CF9 /* ThirdViewController.swift */,
@@ -285,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5C4BFBE1FC16E8C0083DEBC /* test2.xcdatamodeld in Sources */,
+				A5C4BFBE1FC16E8C0083DEBC /* main.xcdatamodeld in Sources */,
 				093071BD1FC163D700F25D60 /* mapview.swift in Sources */,
 				A51E3A901FC097C000EB77A1 /* SecondViewController.swift in Sources */,
 				A51E3A8C1FC097C000EB77A1 /* AppDelegate.swift in Sources */,
@@ -294,6 +297,7 @@
 				09E065EA1FC0DA2C00591580 /* connectBank.swift in Sources */,
 				A51E3A8E1FC097C000EB77A1 /* FirstViewController.swift in Sources */,
 				0955E7E51FC17D93005777A7 /* linktowebController.swift in Sources */,
+				A54415EC1FC18D0B00D1CE45 /* SavingsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,13 +579,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A5C4BFBC1FC16E8C0083DEBC /* test2.xcdatamodeld */ = {
+		A5C4BFBC1FC16E8C0083DEBC /* main.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A5C4BFBD1FC16E8C0083DEBC /* test2.xcdatamodel */,
+				A5C4BFBD1FC16E8C0083DEBC /* main.xcdatamodel */,
 			);
-			currentVersion = A5C4BFBD1FC16E8C0083DEBC /* test2.xcdatamodel */;
-			path = test2.xcdatamodeld;
+			currentVersion = A5C4BFBD1FC16E8C0083DEBC /* main.xcdatamodel */;
+			path = main.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
