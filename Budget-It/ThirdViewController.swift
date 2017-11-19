@@ -72,7 +72,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             let context = appDelegate.persistentContainer.viewContext
             let newEntry = NSEntityDescription.insertNewObject(forEntityName: "Entry", into: context)
             
-            newEntry.setValue(string_NewExpense, forKey:"price")
+            newEntry.setValue(text, forKey:"price")
             newEntry.setValue(currentCategory, forKey:"category")
             newEntry.setValue(inputTextString, forKey:"itemName")
             print(inputTextString)
