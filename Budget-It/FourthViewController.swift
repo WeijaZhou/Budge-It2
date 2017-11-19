@@ -68,7 +68,7 @@ class FourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entry")
-        
+        var newPrice = "0"
         request.returnsObjectsAsFaults = false
         do{
             let results = try context.fetch(request)
@@ -76,20 +76,16 @@ class FourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if results.count>0{
                 for result in results as! [NSManagedObject]{
                     let itemName = result.value(forKey: "itemName") as? String
-                    var price = result.value(forKey: "price") as? String
+                    if let price = result.value(forKey: "price") as? String{
+                        var newPrice = price
+                    }
                     let category = result.value(forKey: "category") as? String
-                    if (price != nil){
-                        
-                    }
-                    else{
-                        print ("Check")
-                        price = "0"
-                    }
+                   
                     print(itemName)
                     print(category)
-                    print(price)
+                    print(newPrice)
                     let finalString1 = itemName! + "     "
-                    let finalString2 = price! + "      "
+                    let finalString2 = newPrice + "      "
                     let finalString3 = finalString1 + finalString2 + category!
                     list.append(finalString3)
                     
