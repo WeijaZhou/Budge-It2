@@ -19,6 +19,8 @@
 		A51E3A981FC097C000EB77A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51E3A961FC097C000EB77A1 /* LaunchScreen.storyboard */; };
 		A51E3AA31FC097C000EB77A1 /* Budget_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3AA21FC097C000EB77A1 /* Budget_ItTests.swift */; };
 		A51E3AAE1FC097C000EB77A1 /* Budget_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3AAD1FC097C000EB77A1 /* Budget_ItUITests.swift */; };
+		A5C4BFBE1FC16E8C0083DEBC /* test2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5C4BFBC1FC16E8C0083DEBC /* test2.xcdatamodeld */; };
+		A5C4BFC01FC173AF0083DEBC /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C4BFBF1FC173AF0083DEBC /* FourthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		A51E3AA91FC097C000EB77A1 /* Budget-ItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Budget-ItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51E3AAD1FC097C000EB77A1 /* Budget_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget_ItUITests.swift; sourceTree = "<group>"; };
 		A51E3AAF1FC097C000EB77A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C4BFBD1FC16E8C0083DEBC /* test2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = test2.xcdatamodel; sourceTree = "<group>"; };
+		A5C4BFBF1FC173AF0083DEBC /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,12 +112,14 @@
 			isa = PBXGroup;
 			children = (
 				A51E3A8B1FC097C000EB77A1 /* AppDelegate.swift */,
+				A5C4BFBC1FC16E8C0083DEBC /* test2.xcdatamodeld */,
 				A51E3A8D1FC097C000EB77A1 /* FirstViewController.swift */,
 				A51E3A8F1FC097C000EB77A1 /* SecondViewController.swift */,
 				A518F2ED1FC10A15006E8CF9 /* ThirdViewController.swift */,
 				09E065E91FC0DA2C00591580 /* connectBank.swift */,
 				093071BC1FC163D700F25D60 /* mapview.swift */,
 				A51E3A911FC097C000EB77A1 /* Main.storyboard */,
+				A5C4BFBF1FC173AF0083DEBC /* FourthViewController.swift */,
 				A51E3A941FC097C000EB77A1 /* Assets.xcassets */,
 				A51E3A961FC097C000EB77A1 /* LaunchScreen.storyboard */,
 				A51E3A991FC097C000EB77A1 /* Info.plist */,
@@ -276,9 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C4BFBE1FC16E8C0083DEBC /* test2.xcdatamodeld in Sources */,
 				093071BD1FC163D700F25D60 /* mapview.swift in Sources */,
 				A51E3A901FC097C000EB77A1 /* SecondViewController.swift in Sources */,
 				A51E3A8C1FC097C000EB77A1 /* AppDelegate.swift in Sources */,
+				A5C4BFC01FC173AF0083DEBC /* FourthViewController.swift in Sources */,
 				A518F2EE1FC10A15006E8CF9 /* ThirdViewController.swift in Sources */,
 				09E065EA1FC0DA2C00591580 /* connectBank.swift in Sources */,
 				A51E3A8E1FC097C000EB77A1 /* FirstViewController.swift in Sources */,
@@ -561,6 +569,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A5C4BFBC1FC16E8C0083DEBC /* test2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A5C4BFBD1FC16E8C0083DEBC /* test2.xcdatamodel */,
+			);
+			currentVersion = A5C4BFBD1FC16E8C0083DEBC /* test2.xcdatamodel */;
+			path = test2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A51E3A801FC097C000EB77A1 /* Project object */;
 }

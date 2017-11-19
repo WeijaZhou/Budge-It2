@@ -6,20 +6,21 @@
 //  Copyright © 2017 Weija Zhou. All rights reserved.
 //
 import UIKit
-
+import CoreData
 class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
+    @IBOutlet weak var itemInput: UITextField!
     
     @IBOutlet weak var PickerView: UIPickerView!
     
     @IBOutlet weak var InputField: UITextField!
     @IBOutlet weak var Label1: UILabel!
     
-    var currentCategory: String = "Fixed Expense"
+    var currentCategory: String = "Beverages"
   
     
     
-    let categories = ["Fixed Expenses", "Food", "Loans", "Transportation", "Personal Expenses"]
+    let categories = ["Beverages", "Restaurant/Food", "Entertainment", "Retail", "Transportaion"]
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -39,19 +40,19 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBAction func EnterButton(_ sender: Any) {
         
         var textNumber: String = ""
-        if (currentCategory == "Fixed Expense"){
+        if (currentCategory == "Beverages"){
             textNumber = "CurrentExpense1"
         }
-        else if (currentCategory == "Food"){
+        else if (currentCategory == "Restaurant/Food"){
             textNumber = "CurrentExpense2"
         }
-        else if (currentCategory == "Loans"){
+        else if (currentCategory == "Entertainment"){
             textNumber = "CurrentExpense3"
         }
-        else if (currentCategory == "Transportation"){
+        else if (currentCategory == "Retail"){
             textNumber = "CurrentExpense4"
         }
-        else if (currentCategory == "Personal Expenses"){
+        else if (currentCategory == "Transportaion"){
             textNumber = "CurrentExpense5"
         }
         let x = UserDefaults.standard.object(forKey: textNumber) as? String
@@ -60,14 +61,28 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let currentExpense =  Int(x!)
         print (currentExpense)
         var text = InputField.text
+        var inputTextString = itemInput.text
         var int_Text = Int(text!)
         let newExpense = currentExpense! - int_Text!
         let string_NewExpense = String(newExpense)
         UserDefaults.standard.removeObject(forKey: textNumber)
         UserDefaults.standard.set(string_NewExpense,forKey: textNumber)
         print(string_NewExpense)
-        //        self.performSegue(withIdentifier: "Segue1", sender: self)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newEntry = NSEntityDescription.insertNewObject(forEntityName: "Entry", into: context)
         
+        newEntry.setValue(string_NewExpense, forKey:"price")
+        newEntry.setValue(currentCategory, forKey:"category")
+        newEntry.setValue(inputTextString, forKey:"price")
+        print(inputTextString)
+        do{
+        try context.save()
+            print("YAY")
+        }
+        catch{
+            
+        }
 
     }
     
