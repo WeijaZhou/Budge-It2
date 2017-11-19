@@ -16,7 +16,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var InputField: UITextField!
     @IBOutlet weak var Label1: UILabel!
     
-    var currentCategory: String = "Beverages"
+        var currentCategory: String = "Beverages"
   
     
     
@@ -37,7 +37,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     
-    @IBAction func EnterButton(_ sender: Any) {
+    @IBAction func insertEntry(_ sender: Any) {
         if ((itemInput.text != nil && itemInput.text != "") || (InputField.text != nil && InputField.text != "")){
             var textNumber: String = ""
             if (currentCategory == "Beverages"){
@@ -89,7 +89,6 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
         InputField.text = ""
         itemInput.text = ""
-
     }
     
         override func viewDidLoad() {
