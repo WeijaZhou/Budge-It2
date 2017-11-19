@@ -84,9 +84,11 @@ class FourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     print(itemName)
                     print(category)
                     print(newPrice)
-                    let finalString1 = itemName! + "     "
+                    print ("FINAL STRING -----")
+                    //let finalString1 = itemName! + "     "
                     let finalString2 = newPrice + "      "
-                    let finalString3 = finalString1 + finalString2 + category!
+                    //let finalString3 = finalString1 + finalString2 + category!
+                    let finalString3 =  finalString2 + category!
                     list.append(finalString3)
                     
                 }

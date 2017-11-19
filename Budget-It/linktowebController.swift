@@ -11,10 +11,8 @@ import SafariServices
 
 
 class linktowebController: UIViewController {
-    @IBOutlet weak var linkButton: UIButton!
-    @IBAction func openWebPage(_ sender: Any){
-        let SVD = SFSafariViewController(url: URL(string: "https://my.wealthsimple.com/app/public/region")!)
-        self.present(SVD, animated:true, completion: nil)
+    @IBAction func clickButton(_ sender: Any) {
+        UIApplication.shared.openURL(URL(string: "http://www.stackoverflow.com")!)
     }
     
     override func viewDidLoad() {
