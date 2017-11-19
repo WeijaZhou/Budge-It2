@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 class FourthViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    var list:[String] = ["Coke     2.75     Restaurant/Food", "MovieTheater     10.00     Entertainment", "Apple Juice     11.00     Beverage"]
+    var list:[String] = ["Coke     $2.75     Restaurant/Food", "MovieTheater     $10.00     Entertainment", "Apple Juice     $11.00     Beverage"]
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return (list.count)
@@ -46,7 +46,7 @@ class FourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     print(category)
                     print(price)
                     print ("FINAL STRING -----")
-                    let finalString1 = itemName! + "     "
+                    let finalString1 = itemName! + "     $"
                     let finalString2 = price! + "      "
                     let finalString3 = finalString1 + finalString2 + category!
                     list.append(finalString3)
