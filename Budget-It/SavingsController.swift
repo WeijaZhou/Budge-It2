@@ -32,7 +32,8 @@ class SavingController: UIViewController {
             total = total + c!
             total = total + d!
             total = total + e!
-        currentBudget.text = "$"+String(total)
+        var dollar = "$"
+        currentBudget.text = dollar+String(total)
         
         
         
@@ -57,7 +58,8 @@ class SavingController: UIViewController {
         total = total + c!
         total = total + d!
         total = total + e!
-        currentBudget.text = String(total)
+        var dollar = "$"
+        currentBudget.text = dollar+String(total)
         
 
     }
