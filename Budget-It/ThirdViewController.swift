@@ -72,7 +72,7 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
         override func viewDidLoad() {
-        
+        self.view.endEditing(true)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
