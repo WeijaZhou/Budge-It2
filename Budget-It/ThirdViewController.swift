@@ -38,56 +38,62 @@ class ThirdViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     
     @IBAction func EnterButton(_ sender: Any) {
-        InputField.text = nil
-        itemInput.text = nil
-        var textNumber: String = ""
-        if (currentCategory == "Beverages"){
-            textNumber = "CurrentExpense1"
-        }
-        else if (currentCategory == "Restaurant/Food"){
-            textNumber = "CurrentExpense2"
-        }
-        else if (currentCategory == "Entertainment"){
-            textNumber = "CurrentExpense3"
-        }
-        else if (currentCategory == "Retail"){
-            textNumber = "CurrentExpense4"
-        }
-        else if (currentCategory == "Transportaion"){
-            textNumber = "CurrentExpense5"
-        }
-        let x = UserDefaults.standard.object(forKey: textNumber) as? String
-        print(textNumber)
-        print(x)
-        let currentExpense =  Int(x!)
-        print (currentExpense)
-        var text = InputField.text
-        var inputTextString = itemInput.text
-        var int_Text = Int(text!)
-        let newExpense = currentExpense! - int_Text!
-        let string_NewExpense = String(newExpense)
-        UserDefaults.standard.removeObject(forKey: textNumber)
-        UserDefaults.standard.set(string_NewExpense,forKey: textNumber)
-        print(string_NewExpense)
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let newEntry = NSEntityDescription.insertNewObject(forEntityName: "Entry", into: context)
-        
-        newEntry.setValue(string_NewExpense, forKey:"price")
-        newEntry.setValue(currentCategory, forKey:"category")
-        newEntry.setValue(inputTextString, forKey:"itemName")
-        print(inputTextString)
-        do{
-        try context.save()
-            print("YAY")
-        }
-        catch{
+        if ((itemInput.text != nil && itemInput.text != "") || (InputField.text != nil && InputField.text != "")){
+            var textNumber: String = ""
+            if (currentCategory == "Beverages"){
+                textNumber = "CurrentExpense1"
+            }
+            else if (currentCategory == "Restaurant/Food"){
+                textNumber = "CurrentExpense2"
+            }
+            else if (currentCategory == "Entertainment"){
+                textNumber = "CurrentExpense3"
+            }
+            else if (currentCategory == "Retail"){
+                textNumber = "CurrentExpense4"
+            }
+            else if (currentCategory == "Transportaion"){
+                textNumber = "CurrentExpense5"
+            }
+            let x = UserDefaults.standard.object(forKey: textNumber) as? String
+            print(textNumber)
+            print(x)
+            let currentExpense =  Int(x!)
+            print (currentExpense)
+            var text = InputField.text
+            var inputTextString = itemInput.text
+            var int_Text = Int(text!)
+            let newExpense = currentExpense! - int_Text!
+            let string_NewExpense = String(newExpense)
+            UserDefaults.standard.removeObject(forKey: textNumber)
+            UserDefaults.standard.set(string_NewExpense,forKey: textNumber)
+            print(string_NewExpense)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let newEntry = NSEntityDescription.insertNewObject(forEntityName: "Entry", into: context)
+            
+            newEntry.setValue(string_NewExpense, forKey:"price")
+            newEntry.setValue(currentCategory, forKey:"category")
+            newEntry.setValue(inputTextString, forKey:"itemName")
+            print(inputTextString)
+            do{
+                try context.save()
+                print("YAY")
+            }
+            catch{
+                
+            }
+            InputField.text = ""
+            itemInput.text = ""
             
         }
+        InputField.text = ""
+        itemInput.text = ""
 
     }
     
         override func viewDidLoad() {
+           
             let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
             
             //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
