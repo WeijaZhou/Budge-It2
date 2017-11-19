@@ -62,7 +62,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print ("YOYOYOYYOYOYOYOYOYO")
         super.viewDidAppear(animated)
         
         if CLLocationManager.authorizationStatus() == .notDetermined {
@@ -83,7 +82,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
             
             // region data
-            var title = "Franky's Hall of Sports"
+            var title = "Jackie's Sports Emporium"
             //need to specify type of expense
             var coordinate = CLLocationCoordinate2DMake(42.9988376, -81.2784611)
             var regionRadius = 5.0
@@ -127,7 +126,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             
             // region data
-            title = "Jack's Butchershop"
+            title = "Weija's Butchershop"
             //need to specify type of expense
             coordinate = CLLocationCoordinate2DMake(43.001594, -81.277124)
             regionRadius = 40.0
