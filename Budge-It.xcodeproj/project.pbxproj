@@ -10,6 +10,7 @@
 		093071BB1FC163C000F25D60 /* America.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 093071BA1FC163C000F25D60 /* America.gpx */; };
 		093071BD1FC163D700F25D60 /* mapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093071BC1FC163D700F25D60 /* mapview.swift */; };
 		0955E7E51FC17D93005777A7 /* linktowebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955E7E41FC17D93005777A7 /* linktowebController.swift */; };
+		0963B9321FC198FC0073325B /* viewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963B9311FC198FC0073325B /* viewController.swift */; };
 		09E065EA1FC0DA2C00591580 /* connectBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E065E91FC0DA2C00591580 /* connectBank.swift */; };
 		A518F2EE1FC10A15006E8CF9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518F2ED1FC10A15006E8CF9 /* ThirdViewController.swift */; };
 		A51E3A8C1FC097C000EB77A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3A8B1FC097C000EB77A1 /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 		093071BA1FC163C000F25D60 /* America.gpx */ = {isa = PBXFileReference; lastKnownFileType = text; path = America.gpx; sourceTree = "<group>"; };
 		093071BC1FC163D700F25D60 /* mapview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapview.swift; sourceTree = "<group>"; };
 		0955E7E41FC17D93005777A7 /* linktowebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = linktowebController.swift; sourceTree = "<group>"; };
+		0963B9311FC198FC0073325B /* viewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewController.swift; sourceTree = "<group>"; };
 		09E065E91FC0DA2C00591580 /* connectBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectBank.swift; sourceTree = "<group>"; };
 		A518F2ED1FC10A15006E8CF9 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		A51E3A881FC097C000EB77A1 /* Budget-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				A51E3A961FC097C000EB77A1 /* LaunchScreen.storyboard */,
 				A51E3A991FC097C000EB77A1 /* Info.plist */,
 				093071BA1FC163C000F25D60 /* America.gpx */,
+				0963B9311FC198FC0073325B /* viewController.swift */,
 			);
 			path = "Budget-It";
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				09E065EA1FC0DA2C00591580 /* connectBank.swift in Sources */,
 				A51E3A8E1FC097C000EB77A1 /* FirstViewController.swift in Sources */,
 				0955E7E51FC17D93005777A7 /* linktowebController.swift in Sources */,
+				0963B9321FC198FC0073325B /* viewController.swift in Sources */,
 				A54415EC1FC18D0B00D1CE45 /* SavingsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
