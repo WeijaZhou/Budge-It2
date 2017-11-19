@@ -11,8 +11,7 @@ class viewController: UIViewController {
     
     @IBOutlet weak var myWebView: UIWebView!
     override func viewDidLoad() {
-        print("HELELFL")
-        myWebView.loadRequest(URLRequest(url: URL(string: "http://hardwirestudios.com")!))
+        myWebView.loadRequest(URLRequest(url: URL(string: "https://my.wealthsimple.com/app/start?")!))
         super.viewDidLoad()
         //Uncomment the line below if you want the tap n
     }
