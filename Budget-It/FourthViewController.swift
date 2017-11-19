@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 class FourthViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    var list:[String] = ["Coke     $2.75     Restaurant/Food", "MovieTheater     $10.00     Entertainment", "Apple Juice     $11.00     Beverage"]
+    var list:[String] = ["Item     Price      Type", "CocaCola Bottle    $2.75     Restaurant/Food", "IMAX MOVIE STANDARDTICKET     $10.00     Entertainment", "Wonderbread 12pk     $11.00     Beverage"]
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return (list.count)
@@ -23,9 +23,6 @@ class FourthViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     @IBOutlet weak var testLabel: UILabel!
         override func viewWillAppear(_ animated: Bool) {
-        
-        list.removeAll()
-
         super.viewDidLoad()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
