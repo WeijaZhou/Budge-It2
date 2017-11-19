@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0918011E1FC1499A00A3DD7B /* America.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 0918011D1FC1499A00A3DD7B /* America.gpx */; };
 		091801201FC149A800A3DD7B /* mapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0918011F1FC149A800A3DD7B /* mapview.swift */; };
-		091801221FC161DE00A3DD7B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091801211FC161DE00A3DD7B /* ChartViewController.swift */; };
 		09E065EA1FC0DA2C00591580 /* connectBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E065E91FC0DA2C00591580 /* connectBank.swift */; };
 		A518F2EE1FC10A15006E8CF9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518F2ED1FC10A15006E8CF9 /* ThirdViewController.swift */; };
 		A51E3A8C1FC097C000EB77A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E3A8B1FC097C000EB77A1 /* AppDelegate.swift */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		0918011D1FC1499A00A3DD7B /* America.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = America.gpx; path = "../../../../Desktop/Budge-It2-jack/Budget-It/America.gpx"; sourceTree = "<group>"; };
 		0918011F1FC149A800A3DD7B /* mapview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mapview.swift; path = "../../../../Desktop/Budge-It2-jack/Budget-It/mapview.swift"; sourceTree = "<group>"; };
-		091801211FC161DE00A3DD7B /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		09E065E91FC0DA2C00591580 /* connectBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectBank.swift; sourceTree = "<group>"; };
 		A518F2ED1FC10A15006E8CF9 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		A51E3A881FC097C000EB77A1 /* Budget-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,7 +118,6 @@
 				A51E3A961FC097C000EB77A1 /* LaunchScreen.storyboard */,
 				A51E3A991FC097C000EB77A1 /* Info.plist */,
 				0918011D1FC1499A00A3DD7B /* America.gpx */,
-				091801211FC161DE00A3DD7B /* ChartViewController.swift */,
 			);
 			path = "Budget-It";
 			sourceTree = "<group>";
@@ -280,7 +277,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A51E3A901FC097C000EB77A1 /* SecondViewController.swift in Sources */,
-				091801221FC161DE00A3DD7B /* ChartViewController.swift in Sources */,
 				A51E3A8C1FC097C000EB77A1 /* AppDelegate.swift in Sources */,
 				A518F2EE1FC10A15006E8CF9 /* ThirdViewController.swift in Sources */,
 				091801201FC149A800A3DD7B /* mapview.swift in Sources */,
